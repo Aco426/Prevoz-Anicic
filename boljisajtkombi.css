@@ -1,0 +1,596 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  color: white;
+  overflow-x: hidden;
+  margin-top: 10px;
+}
+
+:root {
+  --yellow: #ffd000;
+  --dark: #0f0f0f;
+}
+
+
+/* NAVBAR */
+nav {
+  width: 100%;
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+nav h1 {
+  color: var(--yellow);
+  font-size: 26px;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav ul li:hover {
+  color: var(--yellow);
+}
+
+/* RESET */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* HERO */
+.hero {
+  min-height: 99vh;
+  width: 100%;
+  background: linear-gradient(120deg, #000000, #1a1a1a);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTAINER */
+.hero-container {
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT */
+.hero-content {
+  width: 50%;
+  max-width: 600px;
+  font-size: 30px;
+  margin-left: -120px;
+}
+
+/* TEXT */
+.hero h2 {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.hero span {
+  color: var(--yellow);
+}
+
+.hero p {
+  opacity: 0.85;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+/* BUTTON */
+.btn {
+  padding: 15px 45px;
+  background: var(--yellow);
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+}
+
+/* RIGHT IMAGE */
+.kombislika {
+  width: 60%;
+  height: 600px;
+
+  background-image: url("https://i.postimg.cc/cJ3x8gTc/kombi-slika-uredjena.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  margin-right: -100px;
+}
+
+
+/* SERVICES */
+.services {
+  padding: 100px 80px;
+  background: #141414;
+  min-height: 65vh;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title h3 {
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--yellow);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #1f1f1f;
+  padding: 40px;
+  border-radius: 15px;
+  transition: 0.3s;
+  border: 1px solid transparent;
+  font-size: 17px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border: 1px solid var(--yellow);
+}
+
+.card h4 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--yellow);
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 80px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  background: #0f0f0f;
+  min-height: 80vh;
+}
+
+.about-text {
+  flex: 1;
+  margin-top: 50px;
+}
+
+.about-text h3 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: var(--yellow);
+}
+
+.about-text p {
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+.about-img {
+  flex: 1;
+  max-width: 100%;
+  height: 600px;
+  border-radius: 20px;
+  background-image: url('https://i.postimg.cc/cJ3x8gTc/kombi-slika-uredjena.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.stats {
+  display: flex;                  
+  justify-content: space-around;  
+  align-items: center;            
+  gap: 30px;                      
+  margin-top: 50px;
+  color: white;
+}
+
+.stat {
+  text-align: center;             
+}
+
+.count {
+  font-size: 2rem;                
+  font-weight: bold;
+}
+
+.plus {
+  font-size: 2rem;                /* isto kao broj */
+  font-weight: bolder;
+  vertical-align: middle;    
+  line-height: 1;
+}
+
+.stat p {
+  margin: 0;                      
+  font-size: 25px;
+  font-weight: bold;
+  color: #3a3a3a;
+}
+
+.saradnja {
+  font-size: 15px;
+  color: var(--yellow);
+  opacity: 0.8;
+}
+
+/* CONTACT */
+#contact {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #141414;
+  color: var(--yellow);
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  margin-bottom: 20px;
+}
+
+#contactForm {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid var(--yellow);
+  border-radius: 8px;
+  background-color: #141414;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+#contactForm button {
+  padding: 12px;
+  font-size: 1rem;
+  background-color: var(--yellow);
+  color: #141414;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  font-weight: 550;
+}
+
+#contactForm button:hover {
+  background-color: #e6b800;
+  color: #141414;
+}
+
+#formMessage {
+  margin-top: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+.contact-block {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: var(--yellow);
+  font-weight: 500;
+  transition: transform 0.4s;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+}
+
+.contact-item i {
+  background-color: #141414;
+  color: var(--yellow);
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 30px;
+  font-size: 30px;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: var(--yellow);
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.3);
+}
+
+.instagram:hover {
+  color: #E1306C;
+}
+
+.viber:hover {
+  color: #7360F2;
+}
+
+.facebook:hover {
+  color: #1877F2;
+}
+
+/* FOOTER */
+footer {
+  background: black;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* RESPONSIVE FOR MOBILE */
+@media (max-width: 900px) {
+
+  /* ----------------- HERO ----------------- */
+  .hero {
+    flex-direction: column;
+    padding: 20px 20px; /* fiksirao sam nedostajući px */
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    min-width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    margin-left: 10px;
+    margin-top: 25px;
+    font-size: 12px;
+  }
+
+  .hero h2 {
+    font-size: 35px;
+    display: grid;
+    margin-top: 20px;
+    width: 90%;
+  }
+
+  .btn {
+    width: 75%;
+    font-size: 15px;
+    display: grid;
+    margin-left: 35px;
+  }
+
+  .kombislika {
+    width: 100%;
+    height: 300px; /* visina smanjena za mobile */
+    margin: 40px 0 0 0;
+  }
+
+  /* ----------------- SERVICES ----------------- */
+  .services {
+    padding: 80px 40px;
+    min-width: 95%;
+    display: grid;
+    gap: 25px;
+    height: fit-content;
+  }
+
+  .title h3 {
+    display: grid;
+    font-size: 35px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .card h4 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .card p {
+    font-size: 15px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr; 
+    display: grid;
+    gap: 10px;
+  }
+
+  /* ----------------- ABOUT ----------------- */
+  .about {
+    flex-direction: column;
+    padding: 10px 25px;
+    height: 70vh;
+  }
+
+  .h3 {
+    display: grid;
+    margin-top: 15px;  
+  }
+
+  .stats {
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+
+  .count-text1, .count-text {
+    font-size: 15px;   
+    color: #3a3a3a;
+    font-weight: bold;
+  }
+
+  /* ----------------- CONTACT ----------------- */
+  #contact {
+    padding: 60px 30px;
+  }
+
+  .h2 {
+    font-size: 40px;
+  }
+
+  .btn-contact {
+    font-size: 25px;
+    padding: 0 5px;
+    font-weight: 550;
+  }
+
+  .contact-item {
+    padding: 0 10px;
+  }
+}
+
+/* HAMBURGER MENU */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: var(--yellow);
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+/* Mobile view */
+@media (max-width: 900px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    padding: 15px 50px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    min-height: 100dvh;
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(10px);
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    transition: 0.5s;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    font-size: 20px;
+  }
+
+  /* Animate hamburger to X */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}

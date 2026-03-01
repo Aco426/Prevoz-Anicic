@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prevoz | Profesionalna Usluga</title>
+
+<link rel="stylesheet" href="boljisajtkombi.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<script src="boljisajtkombi.js"></script>
+<body>
+
+  <!-- NAV -->
+
+  <nav>
+
+  <h1>Prevoz Aničić</h1>
+
+  <!-- HAMBURGER -->
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links">
+    <li onclick="scrollToSection('hero')">Početna</li>
+    <li onclick="scrollToSection('services')">Usluge</li>
+    <li onclick="scrollToSection('about')">O Nama</li>
+    <li onclick="scrollToSection('contact')">Kontakt</li>
+  </ul>
+
+</nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero" id="hero">
+  <div class="hero-container">
+
+    <div class="hero-content">
+      <h2>Brz i Siguran <span>Prevoz</span></h2>
+
+      <p>
+        Građevinski materijal, sanitarije, pločice i sve što vam treba – brzo, sigurno i pouzdano.
+        <br>
+        Aničić kombi prevoz stiže do vaše lokacije bez problema!
+      </p>
+
+      <button class="btn" onclick="scrollToSection('contact')">
+        Kontaktiraj Nas
+      </button>
+    </div>
+
+    <div class="kombislika"></div>
+
+  </div>
+</section>
+
+
+  <!-- SERVICES -->
+
+  <section class="services" id="services">
+
+    <div class="title">
+      <h3>Naše Usluge</h3>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <h4>Građevinski materijal</h4>
+        <p>🏗️🚽Transportujemo cement, lijepak, pločice, drvo, lavaboe, WC šolje i tuš kabine – brzo i pouzdano.</p>
+      </div>
+
+      <div class="card">
+        <h4>Utovar i istovar</h4>
+        <p>📦 Profesionalno utovarujemo i istovarujemo vašu robu, bilo za selidbe, projekte ili dostavu – tacno po dogovoru.</p>
+      </div>
+
+      <div class="card">
+        <h4>Odvoz nepotrebnih stvari</h4>
+        <p>♻️ Efikasno odvozimo sve što vam više ne treba – čisto, brzo i praktično, za stanove, kuće ili manja gradilišta.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <div class="about-text">
+      <h3 class="h3">O Nama</h3>
+
+      <p>
+        Aničić kombi prevoz je pouzdan partner za transport svih vrsta materijala i robe širom Crne Gore.
+        Sa višegodišnjim iskustvom u prevozu građevinskog materijala, sanitarija, nameštaja i drugih tereta, pružamo brzu, fleksibilnu i sigurnu uslugu prilagođenu vašim potrebama.
+        Poverenje naših klijenata je naš prioritet, a cilj nam je da vaš teret stigne na odredište tačno i po dogovoru.
+        <br>
+      <div class="saradnja">
+        Nudimo saradnju sa privatnim licima,firmama,gradjevinskim firmama i svima kojima je potreban prevoz!
+      </div>
+
+      </p>
+    
+
+  <div class="stats">
+     <div class="stat">
+        <span class="count" data-target="300">0</span>+
+        <br>
+        <p class="count-text1">Klijenata</p>
+      </div>
+
+      <div class="stat">
+        <span class="count" data-target="4">0</span>+
+        <br>
+        <p class="count-text">Godine iskustva</p>
+      </div>
+  </div>
+
+    </div>
+
+    <div class="about-img"></div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+
+<section id="contact" style="--yellow: #FFC107;">
+  <div class="container">
+    <h2 class="h2">Kontaktirajte nas</h2>
+    <p>Pošaljite poruku ili nas pozovite direktno:</p>
+
+    <form id="contactForm">
+
+  <input type="text" name="name" placeholder="Ime" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="tel" name="phone" placeholder="Telefon(opciono)">
+
+  <textarea name="message" placeholder="Poruka" required></textarea>
+
+  <button type="submit" class="btn-contact">Pošalji</button>
+
+</form>
+
+<p id="formMessage"></p>
+
+<script src="contact.js"></script>
+
+  
+  <div class="contact-block" style="--yellow: #FFC107;">
+  
+  <div class="contact-item">
+    <i class="fas fa-phone-alt"></i>
+    <span>+382 69 061 495</span>
+  </div>
+
+  <div class="contact-item">
+    <i class="fab fa-whatsapp"></i>
+    <span>+382 69 061 495</span>
+  </div>
+
+  <div class="contact-item">
+    <i class="fas fa-envelope"></i>
+    <span>anicicprevoz@gmail.com</span>
+  </div>
+</div>
+
+<div class="social-icons">
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/veskoanicic" target="_blank" class="instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <!-- Viber -->
+    <a href="viber://chat?number=+38269061495" class="viber">
+      <i class="fa-brands fa-viber"></i>
+    </a>
+
+    <!-- facebook -->
+    <a href="https://facebook.com/veskoanicic" target="_blank" class="facebook">
+  <i class="fa-brands fa-facebook"></i>
+    </a>
+
+
+  </div>
+
+
+
+
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Prevoz | Sva prava zadržana
+  </footer>
+
+
+</body>
+</html>
