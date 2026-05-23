@@ -1,75 +1,80 @@
 function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({
-    behavior: "smooth"
-  });
+  const target = document.getElementById(id);
+  if (!target) return;
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
 }
-// Navbar shadow on scroll
+
+
 window.addEventListener("scroll", () => {
-  const nav = document.querySelector("nav");
-  if (window.scrollY > 50) {
-    nav.style.boxShadow = "0 5px 20px rgba(0,0,0,0.5)";
+  const header = document.querySelector('.page-header');
+  if (!header) return;
+  if (window.scrollY > 30) {
+    header.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.25)';
   } else {
-    nav.style.boxShadow = "none";
+    header.style.boxShadow = 'none';
   }
 });
 
-// brojac za sekviju about
 
-document.addEventListener("DOMContentLoaded", function () {
+function initCounters() {
   const counters = document.querySelectorAll('.count');
+  if (!counters.length) return;
+
 
   const runCounter = (counter) => {
     const target = +counter.getAttribute('data-target');
     let count = 0;
-    const duration = 3200; // trajanje animacije u ms
-    const stepTime = Math.abs(Math.floor(duration / target));
+    const duration = 2500;
+    const stepTime = Math.max(Math.floor(duration / target), 20);
+
 
     const timer = setInterval(() => {
       count++;
       counter.innerText = count;
-
       if (count >= target) {
         clearInterval(timer);
       }
     }, stepTime);
   };
 
-  const options = {
-    root: null,
-    threshold: 0.4,
-  };
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         counters.forEach(counter => runCounter(counter));
-        observer.unobserve(entry.target);
+        observer.disconnect();
       }
     });
-  }, options);
+  }, { threshold: 0.4 });
 
-  const about = document.getElementById('about');
-  observer.observe(about);
-});
 
-//HAMBURGER MENI
-document.addEventListener("DOMContentLoaded", () => {
+  observer.observe(counters[0]);
+}
 
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
 
+function initHamburger() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
   if (!hamburger || !navLinks) return;
 
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navLinks.classList.toggle("active");
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
   });
 
-  document.querySelectorAll(".nav-links li").forEach(link => {
-    link.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      navLinks.classList.remove("active");
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
     });
   });
+}
 
+
+window.addEventListener('DOMContentLoaded', () => {
+  initCounters();
+  initHamburger();
 });
+
